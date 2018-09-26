@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "ES6",
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "strict": true,
+        "baseUrl": ".",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "lib" : ["dom", "es5", "es2015.promise"],
+        "typeRoots" : ["./node_modules/@types","./@types"],
+        "types": ["vue", "modernizr", "modernizr-config"]
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}

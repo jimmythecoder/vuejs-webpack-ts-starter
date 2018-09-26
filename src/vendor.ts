@@ -1,0 +1,2 @@
+import 'fetch-ie8';
+
