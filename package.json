@@ -1,6 +1,6 @@
 {
   "name": "vuejs-webpack-ts-starter",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "description": "A VueJS + TypeScript + Webpack starter base project",
   "main": "src/app.ts",
   "scripts": {
