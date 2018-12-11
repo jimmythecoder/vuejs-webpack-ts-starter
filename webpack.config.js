@@ -138,9 +138,6 @@ const config = {
     plugins: [
         new ForkTsCheckerWebpackPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        new webpack.ProvidePlugin({
-            Promise: 'es6-promise-promise'
-        }),
         new htmlWebpackPlugin({
             template: `${sourcePath}/index.ejs`,
             version: pkg.version

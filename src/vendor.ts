@@ -1,2 +1,2 @@
-import 'fetch-ie8';
+
 
