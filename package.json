@@ -35,6 +35,8 @@
     "webpack-svg-icon-system": "^0.3.4"
   },
   "dependencies": {
-    "vue": "^2.5.20"
+    "vue": "^2.5.20",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.0.1"
   }
 }

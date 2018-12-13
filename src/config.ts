@@ -6,6 +6,8 @@ const ENV_HOSTS =  <HostConfig>{
     'example.com': 'production'
 };
 
+const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
+
 const hostName          = window.location.hostname;
 const env               = ENV_HOSTS.hasOwnProperty(hostName) ? ENV_HOSTS[hostName] : 'production';
 
@@ -24,19 +26,22 @@ const urlsEnv = {
     }
 } as UrlHostConfig;
 
-const urls = urlsEnv[env];
+const Urls = urlsEnv[env];
  
 // Merge common Urls into our config
 for(var url in urlsEnv.common) {
-    urls[url] = urlsEnv.common[url];
+    Urls[url] = urlsEnv.common[url];
 }   
 
 const config = {
-    urls,
+    Urls,
     ENV_HOSTS,
-    EMAIL_REGEX: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i
+    EMAIL_REGEX
 };
 
 Object.freeze(config);
+Object.freeze(Urls);
+Object.freeze(ENV_HOSTS);
 
+export {Urls, ENV_HOSTS, EMAIL_REGEX};
 export default config;
