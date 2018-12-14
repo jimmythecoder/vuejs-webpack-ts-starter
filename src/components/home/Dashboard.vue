@@ -3,9 +3,6 @@ import Vue from 'vue';
 import {mapState} from 'vuex';
 
 export default Vue.extend({
-    data: {
-
-    },
     components: {
         
     },
@@ -15,11 +12,14 @@ export default Vue.extend({
 });
 </script>
 
+<template>
+<div>
+    <h1>Dashboard: A VueJS + TypeScript + Webpack starter base project.</h1>
+    <p>{{user.name}}</p>
+</div>
+</template>
+
 <style lang="scss" scoped>
     @import '../../styles/settings';
     
 </style>
-
-<template>
-    <h1>A VueJS + TypeScript + Webpack starter base project</h1>
-</template>

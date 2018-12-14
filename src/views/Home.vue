@@ -10,11 +10,13 @@ import Vue from 'vue'
 import Dashboard from '../components/home/Dashboard.vue';
 
 export default Vue.extend({
-    data:{
-
-    },
     components: {
         Dashboard
     }
 })
 </script>
+
+<style lang="scss" scoped>
+    @import '../styles/settings';
+
+</style>

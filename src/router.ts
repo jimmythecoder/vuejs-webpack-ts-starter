@@ -1,4 +1,4 @@
-import Vue from 'Vue';
+import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
@@ -9,6 +9,9 @@ export default new VueRouter({
         {
             path: '/',
             name: 'home',
+            meta: {
+                title: 'Dashboard: Vue power'
+            },
             component: () => import('./views/Home.vue')
         }
     ]
