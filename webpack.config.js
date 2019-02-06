@@ -20,10 +20,7 @@ const config = {
 
     mode: isProd ? "production" : "development",
 
-    entry: {
-        app: [`${sourcePath}/app.ts`],
-        vendor: [`${sourcePath}/vendor.ts`]
-    },
+    entry: `${sourcePath}/app.ts`,
     
     output: {
         filename: 'assets/js/[name].[hash].bundle.js',
@@ -46,9 +43,10 @@ const config = {
         compress: true,
         hot: true,
         port: 3000,
-        host: 'localhost',
+        host: '0.0.0.0',
         disableHostCheck: true,
         before: function(app) {
+            app.use('/api', function(req, res, next) {return setTimeout(next, req.query.mockdelay || 0)}), // Simulate bandwidth delays
             app.use('/api', apiMocker('src/mocks/api'));
         }
     },
@@ -56,7 +54,8 @@ const config = {
     resolve: {
         extensions: ['.ts', '.js', '.vue', '.json', '.scss', '.sass'],
         alias: {
-            'vue$': 'vue/dist/vue.esm.js'
+            'vue$': 'vue/dist/vue.esm.js',
+            '@': sourcePath
         }
     },
 

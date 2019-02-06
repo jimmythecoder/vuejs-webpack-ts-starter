@@ -28,10 +28,6 @@ declare module "*.webm" {
     export default content;
 }
 
-declare module "modernizr" {
-    export default Modernizr;
-}
-
 declare var require: {
     <T>(path: string): T;
     (paths: string[], callback: (...modules: any[]) => void): void;

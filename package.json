@@ -1,6 +1,6 @@
 {
   "name": "vuejs-webpack-ts-starter",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "A VueJS + TypeScript + Webpack starter base project",
   "main": "src/app.ts",
   "scripts": {
@@ -10,33 +10,37 @@
   },
   "author": "James Harris",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jimmythecoder/vuejs-webpack-ts-starter"
+  },
   "devDependencies": {
     "@types/core-js": "^2.5.0",
     "bump-webpack-plugin": "^0.1.0",
-    "clean-webpack-plugin": "^1.0.0",
+    "clean-webpack-plugin": "^1.0.1",
     "connect-api-mocker": "^1.4.0",
     "copy-webpack-plugin": "^4.6.0",
-    "css-loader": "^2.0.0",
-    "file-loader": "^2.0.0",
-    "fork-ts-checker-webpack-plugin": "^0.5.0",
+    "css-loader": "^2.1.0",
+    "file-loader": "^3.0.1",
+    "fork-ts-checker-webpack-plugin": "^0.5.2",
     "html-webpack-plugin": "^3.2.0",
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "ts-lint": "^4.5.1",
-    "ts-loader": "^5.3.1",
-    "typescript": "^3.2.2",
-    "vue-loader": "^15.4.2",
-    "vue-template-compiler": "^2.5.20",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.1",
+    "vue-loader": "^15.6.2",
+    "vue-template-compiler": "^2.6.2",
+    "webpack": "^4.29.1",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14",
     "webpack-svg-icon-system": "^0.3.4"
   },
   "dependencies": {
-    "vue": "^2.5.20",
+    "vue": "^2.6.2",
     "vue-router": "^3.0.2",
-    "vuex": "^3.0.1"
+    "vuex": "^3.1.0"
   }
 }

@@ -1,1 +1,0 @@
-import './modernizr-custom.js';
